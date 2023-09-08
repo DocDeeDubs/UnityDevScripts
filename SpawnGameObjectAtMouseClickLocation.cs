@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnGameObjectAtMouseClickLocation : MonoBehaviour
 {
-    //this class will spawn a game object on another game object at the point that is clicked with a mouse
+    //this class will spawn a game object on any other game object in the scene at the point that is clicked with a mouse
     
     //in the inspector, set a prefab as the game object to spawn.
     public GameObject objectToSpawn;
@@ -24,6 +24,7 @@ public class SpawnGameObjectAtMouseClickLocation : MonoBehaviour
 
 
             //if it hits a game object within 100 of the camera, spawn the game object prefab at that point.
+            // you can use math.infinity as the range if needed.
             if (Physics.Raycast(ray, out hit, 100))
             {
                 //debug log the name of the object hit and the point where it was hit at
